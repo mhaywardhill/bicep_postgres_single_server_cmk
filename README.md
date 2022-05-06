@@ -1,0 +1,1 @@
+# bicep_postgres_single_server_cmk
