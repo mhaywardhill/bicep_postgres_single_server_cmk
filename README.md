@@ -1,6 +1,6 @@
 ## Deploy Postgres Single Server and in Azure using Bicep
 
-I use this project to create a Postgres server encrypted with a customer-managed key in Azure using Bicep. I execute the commands from a Linux terminal on Windows (Ubuntu on WSL).
+I use this project to create a Postgres server encrypted with a customer-managed key CMK in Azure using Bicep. I execute the commands from a Linux terminal on Windows (Ubuntu on WSL).
 
 
 ### Login to Azure using the CLI

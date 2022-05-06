@@ -55,7 +55,7 @@ module postgresDeploy 'postgres.bicep' = {
 }
 
 module kvaccesspolicy 'kvaccesspolicy.bicep' = {
-  name: 'Bicep_Add_Cccesspolicy'
+  name: 'Bicep_Add_Accesspolicy'
   scope: kvrg
   params: {
     keyvaultname: keyvaultname
