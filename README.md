@@ -1,7 +1,6 @@
-## Deploy Postgres Single Server and in Azure using Bicep
+## Deploy Postgres Single Server in Azure using Bicep
 
 I use this project to create a Postgres server encrypted with a customer-managed key CMK in Azure using Bicep. I execute the commands from a Linux terminal on Windows (Ubuntu on WSL).
-<p>&nbsp;</p>
 
 The goals of the project:
 
@@ -12,6 +11,13 @@ The goals of the project:
 * deployment gets the current version of the key, i.e. the version is not hardcoded or passed as a parameter, prevents the template from becoming outdated when the key is rotated
 <p>&nbsp;</p>
 
+### Why not a single file or template?
+
+The deployment is broken down into smaller Bicep templates and then deployed together through the main template. Each template runs in the scope of a resource group, and because we did not want the Postgres server to reside in the same resource group as the Key Vault, it required the deployments to be separated. Although it is best practice to modularise for ease of reuse, I needed to separate more than I intended as this project is a proof-of-concept.
+
+Please note because this is a proof-of-concept, the permissions granted to the Postgres server to the Key Vault are overly generous, and the parameters for the server are hardcoded; you may want to change this if you are reusing the code in Production.
+
+<p>&nbsp;</p>
 
 ### Login to Azure using the CLI
 
