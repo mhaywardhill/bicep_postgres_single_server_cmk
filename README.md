@@ -31,7 +31,7 @@ Use `az account show` to check the subscription context.
 ### Deploy using Bicep
 
 ```terraform
-az deployment sub create -f ./main.bicep --parameters tenantId='xxxxxx-xxxxxx-xxxxx-xxxxxxxxx' keyvaultname='xxxxxx'  keyname='xxxxxx' administratorLogin=xxxxxx' administratorLoginPassword='xxxxxx' servername='xxxxxx' -l UKSouth -c
+az deployment sub create -f ./main.bicep --parameters tenantId='xxxxxx-xxxxxx-xxxxx-xxxxxxxxx' keyvaultname='xxxxxx'  keyname='xxxxxx' administratorLogin='xxxxxx' administratorLoginPassword='xxxxxx' servername='xxxxxx' -l UKSouth -c
 ```
 
 
